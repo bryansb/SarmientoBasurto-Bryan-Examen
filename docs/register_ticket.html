@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/main_format.css" rel="stylesheet">
+        <link href="../css/form_layout.css" rel="stylesheet"/>
+        <link href="../css/2_col_layout.css" rel="stylesheet"/>
+        <script src="../js/administration.js"></script>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <header id="main_header">
+            
+            <div id="logo_container">
+
+                
+
+                <form id="f_search" action="search_user.php" method="POST">  
+                    <input type="search" id="index_search" name="index_search" placeholder="Buscar por cédula o correo"/>
+                </form>
+
+            </div>
+
+            <nav id="header_nav">
+                <a class="nav_a" href="index.html">Inicio</a>
+                <a class="nav_a" href="register_ticket.html">Registrar Ticket</a>
+                <a class="nav_a" href="search_client.html">Buscar Cliente</a>
+                <a class="nav_a" href="search_ticket.php">Buscar Ticket</a>
+            </nav>
+        </header>
+
+        <h2 class="main_title">Registro de Ticket</h2>
+        <main class="main_container center_container">
+            <section class="col col-40">
+
+                <div id="main_notice" class="e_hidden">
+                    <div id="notice" class="div_notice"></div>
+                </div>
+
+                <form id="f_ticket" class="form_data" onsubmit=" return createTicket(event)"
+                    method="POST">
+                    
+                    <label for="i_dni" class="l_i_text">Cédula:</label>
+                    <input type="text" name="i_dni" id="i_dni" class="text_input"/>
+                    <br>
+                    <span id="s_dni_notice" class="s_error_validation"></span>
+                    <label for="i_plate" class="l_i_text">Placa de Vehiculo:</label>
+                    <input type="text" name="i_plate" id="i_plate" class="text_input"/>
+                    <br>
+                    <label for="i_brand" class="l_i_text">Marca de Vehiculo:</label>
+                    <input type="text" name="i_brand" id="i_brand" class="text_input"/>
+                    <br>
+                    <label for="i_model" class="l_i_text">Modelo de Vehiculo:</label>
+                    <input type="text" name="i_model" id="i_model" class="text_input"/>
+                    <br>
+                    <label for="i_ticket_number" class="l_i_text">Numero de Ticket:</label>
+                    <input type="text" name="i_ticket_number" id="i_ticket_number" class="text_input"/>
+                    <br>
+                    <label for="i_date_in" class="l_i_text">Fecha/Hora de Ingreso:</label>
+                    <input type="date" name="i_date_in" id="i_date_in" class="text_input"/>
+                    <br>
+                    <label for="i_time_in" class="l_i_text">Fecha/Hora de Ingreso:</label>
+                    <input type="time" name="i_time_in" id="i_time_in" class="text_input"/>
+                    <br>
+                    <label for="i_date_out" class="l_i_text">Fecha/Hora de Salida:</label>
+                    <input type="date" name="i_date_out" id="i_date_out" class="text_input"/>
+                    <br>
+                    <label for="i_time_out" class="l_i_text">Fecha/Hora de Ingreso:</label>
+                    <input type="time" name="i_time_out" id="i_time_out" class="text_input"/>
+                    <br>
+                    <div class="d_button_container">
+                        <input type="submit" id="i_send_data" class="submit_input" value="Enviar"/>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+    </body>
+</html>

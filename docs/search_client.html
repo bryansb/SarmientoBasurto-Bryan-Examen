@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/main_format.css" rel="stylesheet">
+        <link href="../css/form_layout.css" rel="stylesheet"/>
+        <link href="../css/2_col_layout.css" rel="stylesheet"/>
+        <link href="../css/table_layout.css" rel="stylesheet"/>
+        <script src="../js/administration.js"></script>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <header id="main_header">
+            
+            <div id="logo_container">
+                <form id="f_search" action="search_user.php" method="POST">  
+                    <input type="search" id="index_search" name="index_search" placeholder="Buscar por cédula o correo"/>
+                </form>
+            </div>
+
+            <nav id="header_nav">
+                <a class="nav_a" href="index.html">Inicio</a>
+                <a class="nav_a" href="register_ticket.html">Registrar Ticket</a>
+                <a class="nav_a" href="search_client.html">Buscar Cliente</a>
+                <a class="nav_a" href="search_ticket.php">Buscar Ticket</a>
+            </nav>
+        </header>
+
+        <h2 class="main_title">Buscar Cliente</h2>
+        <main class="main_container center_container">
+            <section class="col col-100 form_section">
+                <form id="f_filter_data" name="f_filter_data" class="col col-100 form_data form_transparent" method="POST" onsubmit=" return filterUsers(event)"> 
+                    <input type="search" name="i_filter" id="i_filter" class="text_input" 
+                        placeholder="Ingrese un parametro de filtrado"/>
+                        <input type="submit" id="i_send_data" class="submit_input" value="Enviar"/>
+                    
+                    <!-- <span id="s_filter_notice" class="s_error_validation"></span> -->
+                </form>
+
+                <div id="users_list" class="col-100 table_container">
+                    <table id="user_data" class="table_content">
+                    
+                    </table>
+                </div>
+            
+            </section>
+        </main>
+        
+    </body>
+</html>
